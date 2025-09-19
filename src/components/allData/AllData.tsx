@@ -73,7 +73,7 @@ const AllData = () => {
   useEffect(() => {
     const fetchData = async () => {
       try{
-        const res = await axios.get("http://localhost:5000/api/allData");
+        const res = await axios.get("https://statistics-api.myata-flowers.ru/api/allData");
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
         const leadsArr = res.data.map((d : any) => ({
           ...d.lead,

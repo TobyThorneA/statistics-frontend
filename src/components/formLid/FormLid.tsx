@@ -165,7 +165,7 @@ const handleAddLead = async (e: React.MouseEvent<HTMLButtonElement>) => {
     };
 
     const response = await axios.post(
-      "http://localhost:5000/api/allData",
+      "https://statistics-api.myata-flowers.ru/api/allData",
       allDataPayload
     );
 
