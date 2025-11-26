@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import FormData from "../components/formData/FormData";
-import FormLid from "../components/formLid/FormLid";
+import FormLead from "../components/formLead/FormLead";
 import AllData from "../components/allData/AllData";
 
 const FormsPage = () => {
@@ -92,7 +92,7 @@ const FormsPage = () => {
           }}
         >
           <div className="w-full flex justify-center order-form">
-            <FormLid />
+            <FormLead />
           </div>
           <div className="w-full flex justify-center expenses-form">
             <FormData />
@@ -105,7 +105,7 @@ const FormsPage = () => {
 
       {/* десктоп отображение */}
       <div className="hidden md:block">
-        {activeForm === "order" && <FormLid />}
+        {activeForm === "order" && <FormLead />}
         {activeForm === "expenses" && <FormData />}
         {activeForm === "all" && <AllData />}
       </div>

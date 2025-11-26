@@ -1,7 +1,14 @@
 // utils
-import type { AllNumberKeys, NumberKeys } from "../types/interface";
+import type { /*AllNumberKeys, */ Lead, NumberKeys } from "../types/interface";
 
-export const numberKeys: AllNumberKeys[] = ["bouquetCost", "salePrice", "deliveryCost"];
+// export const numberKeys: AllNumberKeys[] = ["bouquetCost", "salePrice", "deliveryCost"];
+export const numberKeys: Array<keyof Lead> = [
+  "salePrice",
+  "deliveryIncome",
+  "bouquetCost",
+  "deliveryExpense",
+  "extraExpenses",
+];
 
 export  const parseValue = <T,>(key:keyof T, value: string, numberKeys: NumberKeys<T>[]): T[keyof T]  => {
     if(numberKeys.includes(key as NumberKeys<T>)){
